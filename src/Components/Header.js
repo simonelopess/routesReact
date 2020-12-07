@@ -8,10 +8,10 @@ const Header = () => {
       <nav className={styles.header}>
         <ul>
           <li>
-            <NavLink className={styles.link} to="/">Produtos</NavLink>
+            <NavLink activeClassName={styles.active} className={styles.link} to="/">Produtos</NavLink>
           </li>
           <li>
-            <NavLink className={styles.link} to="contato">Contato</NavLink>
+            <NavLink activeClassName={styles.active} className={styles.link} to="contato">Contato</NavLink>
           </li>
         </ul>
       </nav>
