@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from './Produtos.module.css'
 
 const Produtos = () => {
@@ -13,10 +14,10 @@ const Produtos = () => {
   return (
     <section className={styles.produtos + " animeLeft"}>
       {produtos.map((produto=>
-        <div key={produto.id}>
+        <Link to={`produto/${produto.id}`} key={produto.id}>
           <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo}></img>
-          <h1>{produto.nome}</h1>  
-        </div>
+          <h1 className={styles.nome}>{produto.nome}</h1>  
+        </Link>
       ))}
     </section>
   )
