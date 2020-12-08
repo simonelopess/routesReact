@@ -28,7 +28,10 @@ h1 {
     opacity: initial;
   }
 }
-
+.App {
+  max-width: 40rem;
+  margin: 0 auto;
+}
 .loading{
   width: 20px;
   height: 20px;
