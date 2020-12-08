@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import styles from './Produto.module.css'
+import Head from './Head';
 
 const Produto = () =>{
   //acessando o parametro
@@ -31,7 +32,8 @@ const Produto = () =>{
   if(produto === null ) return null;
 
   return(
-    <section className={styles.produto}>
+    <section className={styles.produto + " animeLeft"}>
+      <Head title={`Ranek | ${produto.nome}`} description={`Ranek | Esse é um produto ${produto.nome}`}/>
       {produto.fotos.map(foto => <img key={foto.src} src={foto.src} alt={foto.titulo}/>)}
       <div>
         <h1>{produto.nome}</h1>
